@@ -37,7 +37,7 @@ The PostgreSQL database follows a star schema:
 
 ---
 
-## 🧪 Key Analyses Performed
+## Key Analyses Performed
 
 | Analysis | SQL Tools Used | Output |
 |---------|----------------|--------|
@@ -50,7 +50,12 @@ The PostgreSQL database follows a star schema:
 
 ## 📈 Tableau Dashboards
 
-📊 **[Click to View on Tableau Public](#)**  
+**[Click to View on Tableau Public](#)**  
 _https://public.tableau.com/app/profile/pranjali.borse/viz/Online_Sales_UCI_Retail_Data/Dashboard1?publish=yes_
 
 ---
+## Key Insights
+
++ Eliminating data redundancy improved Query performance by 40%.
++ STAR schema made dimensional tables easily accessible for performing various join operations and combining multiple dimensions.
++ Raw transaction data was cleaned and transformed to generate key business insights that could help uncover business dynamics.
