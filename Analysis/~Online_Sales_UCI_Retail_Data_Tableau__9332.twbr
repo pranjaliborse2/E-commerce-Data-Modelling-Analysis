@@ -1,0 +1,1720 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <CollapsiblePane />
+    <_.fcp.IndividualControlFormatting.true...IndividualControlFormatting />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Online_Sales_UCI_Retail_Data' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='aggregated_trans' inline='true' name='federated.1igwk971fbnfwu16f448p0oj49hv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='aggregated_trans' name='textscan.1n26wx71rjxogg10ghy531qn4wal'>
+            <connection class='textscan' directory='D:/Self projects/E-commerce Data modelling/Analysis/Query_result_exports' filename='aggregated_trans.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1n26wx71rjxogg10ghy531qn4wal' name='aggregated_trans.csv' table='[aggregated_trans#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='real' name='transection_cost' ordinal='0' />
+            <column datatype='date' name='date' ordinal='1' />
+            <column datatype='integer' name='invoice_no' ordinal='2' />
+            <column datatype='integer' name='customer' ordinal='3' />
+            <column datatype='integer' name='no_of_products' ordinal='4' />
+            <column datatype='integer' name='weekend_orders' ordinal='5' />
+            <column datatype='string' name='string_agg' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transection_cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[transection_cost]</local-name>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias>transection_cost</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>invoice_no</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[invoice_no]</local-name>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias>invoice_no</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[customer]</local-name>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias>customer</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>no_of_products</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[no_of_products]</local-name>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias>no_of_products</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekend_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[weekend_orders]</local-name>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias>weekend_orders</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>string_agg</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[string_agg]</local-name>
+            <parent-name>[aggregated_trans.csv]</parent-name>
+            <remote-alias>string_agg</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]&quot;' value='Total Monthly Transection Cost' />
+        </aliases>
+      </column>
+      <column caption='aggregated_trans.csv' datatype='table' name='[__tableau_internal_object_id__].[aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61]' role='measure' type='quantitative' />
+      <column caption='Customer' datatype='integer' name='[customer]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Invoice No' datatype='integer' name='[invoice_no]' role='measure' type='quantitative' />
+      <column caption='No Of Products' datatype='integer' name='[no_of_products]' role='measure' type='quantitative' />
+      <column caption='String Agg' datatype='string' name='[string_agg]' role='dimension' type='nominal' />
+      <column caption='Transection Cost' datatype='real' name='[transection_cost]' role='measure' type='quantitative' />
+      <column caption='Weekend Orders' datatype='integer' name='[weekend_orders]' role='measure' type='quantitative' />
+      <column-instance column='[no_of_products]' derivation='Avg' name='[avg:no_of_products:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[transection_cost]' derivation='Avg' name='[avg:transection_cost:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[no_of_products]' derivation='None' name='[none:no_of_products:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[no_of_products]' derivation='Sum' name='[sum:no_of_products:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[transection_cost]' derivation='Sum' name='[sum:transection_cost:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/pranj/AppData/Local/Temp/TableauTemp/#TableauTemp_0g4wglf0zaribf17s06lb03pb7dy.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/07/2025 03:18:35 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>transection_cost</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[transection_cost]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>transection_cost</remote-alias>
+              <ordinal>0</ordinal>
+              <family>aggregated_trans.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7561</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>aggregated_trans.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>478</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>invoice_no</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[invoice_no]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>invoice_no</remote-alias>
+              <ordinal>2</ordinal>
+              <family>aggregated_trans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24979</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>customer</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[customer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customer</remote-alias>
+              <ordinal>3</ordinal>
+              <family>aggregated_trans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3503</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>no_of_products</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[no_of_products]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>no_of_products</remote-alias>
+              <ordinal>4</ordinal>
+              <family>aggregated_trans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>188</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weekend_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[weekend_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weekend_orders</remote-alias>
+              <ordinal>5</ordinal>
+              <family>aggregated_trans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>string_agg</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[string_agg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>string_agg</remote-alias>
+              <ordinal>6</ordinal>
+              <family>aggregated_trans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:transection_cost:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:no_of_products:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[none:no_of_products:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:transection_cost:qk]:1&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:no_of_products:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]:1&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='aggregated_trans.csv' id='aggregated_trans.csv_B8A8C896D7E744AC883BD6EC3C52CB61'>
+            <properties context=''>
+              <relation connection='textscan.1n26wx71rjxogg10ghy531qn4wal' name='aggregated_trans.csv' table='[aggregated_trans#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='real' name='transection_cost' ordinal='0' />
+                  <column datatype='date' name='date' ordinal='1' />
+                  <column datatype='integer' name='invoice_no' ordinal='2' />
+                  <column datatype='integer' name='customer' ordinal='3' />
+                  <column datatype='integer' name='no_of_products' ordinal='4' />
+                  <column datatype='integer' name='weekend_orders' ordinal='5' />
+                  <column datatype='string' name='string_agg' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='product_sales' inline='true' name='federated.1jaflfk0nqv5h21aq3b4316dyw50' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='product_sales' name='textscan.155fh4l12i99go18z0mx01ardqe4'>
+            <connection class='textscan' directory='D:/Self projects/E-commerce Data modelling/Analysis/Query_result_exports' filename='product_sales.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.155fh4l12i99go18z0mx01ardqe4' name='product_sales.csv' table='[product_sales#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='total_quanity_sold' ordinal='0' />
+            <column datatype='integer' name='total_transections_product' ordinal='1' />
+            <column datatype='string' name='product_id' ordinal='2' />
+            <column datatype='string' name='description' ordinal='3' />
+            <column datatype='real' name='total_cost' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[product_sales.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_quanity_sold</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_quanity_sold]</local-name>
+            <parent-name>[product_sales.csv]</parent-name>
+            <remote-alias>total_quanity_sold</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[product_sales.csv_091ADFD214B64DB484C8CBD134A746C8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_transections_product</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_transections_product]</local-name>
+            <parent-name>[product_sales.csv]</parent-name>
+            <remote-alias>total_transections_product</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[product_sales.csv_091ADFD214B64DB484C8CBD134A746C8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[product_sales.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[product_sales.csv_091ADFD214B64DB484C8CBD134A746C8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[product_sales.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[product_sales.csv_091ADFD214B64DB484C8CBD134A746C8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_cost]</local-name>
+            <parent-name>[product_sales.csv]</parent-name>
+            <remote-alias>total_cost</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[product_sales.csv_091ADFD214B64DB484C8CBD134A746C8]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Description (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[description]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='true' value='&quot; ANIMAL STICKERS&quot;'>
+            <value>&quot; ANIMAL STICKERS&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='product_sales.csv' datatype='table' name='[__tableau_internal_object_id__].[product_sales.csv_091ADFD214B64DB484C8CBD134A746C8]' role='measure' type='quantitative' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Product Id' datatype='string' name='[product_id]' role='dimension' type='nominal' />
+      <column caption='Total Cost' datatype='real' name='[total_cost]' role='measure' type='quantitative' />
+      <column caption='Total Quanity Sold' datatype='integer' name='[total_quanity_sold]' role='measure' type='quantitative' />
+      <column caption='Total Transections Product' datatype='integer' name='[total_transections_product]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/pranj/AppData/Local/Temp/TableauTemp/#TableauTemp_0pgsenv05crggi1fdum601fak0b6.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/07/2025 03:43:17 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>total_quanity_sold</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_quanity_sold]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_quanity_sold</remote-alias>
+              <ordinal>0</ordinal>
+              <family>product_sales.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1262</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_transections_product</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_transections_product]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_transections_product</remote-alias>
+              <ordinal>1</ordinal>
+              <family>product_sales.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>482</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>product_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[product_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>product_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>product_sales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4317</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>description</remote-alias>
+              <ordinal>3</ordinal>
+              <family>product_sales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2768</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_cost</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_cost]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_cost</remote-alias>
+              <ordinal>4</ordinal>
+              <family>product_sales.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2852</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='product_sales.csv' id='product_sales.csv_091ADFD214B64DB484C8CBD134A746C8'>
+            <properties context=''>
+              <relation connection='textscan.155fh4l12i99go18z0mx01ardqe4' name='product_sales.csv' table='[product_sales#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='total_quanity_sold' ordinal='0' />
+                  <column datatype='integer' name='total_transections_product' ordinal='1' />
+                  <column datatype='string' name='product_id' ordinal='2' />
+                  <column datatype='string' name='description' ordinal='3' />
+                  <column datatype='real' name='total_cost' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='returned_products' inline='true' name='federated.1r622a70wg3s3k102r24x068q72x' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='returned_products' name='textscan.14wxatl0orz1l914zs4nz04dw7ow'>
+            <connection class='textscan' directory='D:/Self projects/E-commerce Data modelling/Analysis/Query_result_exports' filename='returned_products.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.14wxatl0orz1l914zs4nz04dw7ow' name='returned_products.csv' table='[returned_products#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='frequency_of_return' ordinal='0' />
+            <column datatype='string' name='description' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[returned_products.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>frequency_of_return</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[frequency_of_return]</local-name>
+            <parent-name>[returned_products.csv]</parent-name>
+            <remote-alias>frequency_of_return</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[returned_products.csv_C1F7A173088B44B8A4589A4178D2CC79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[returned_products.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[returned_products.csv_C1F7A173088B44B8A4589A4178D2CC79]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='returned_products.csv' datatype='table' name='[__tableau_internal_object_id__].[returned_products.csv_C1F7A173088B44B8A4589A4178D2CC79]' role='measure' type='quantitative' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Frequency Of Return' datatype='integer' name='[frequency_of_return]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/pranj/AppData/Local/Temp/TableauTemp/#TableauTemp_1o1613e1yqz843174tsdk1hrh0td.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/07/2025 04:34:49 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>frequency_of_return</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[frequency_of_return]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>frequency_of_return</remote-alias>
+              <ordinal>0</ordinal>
+              <family>returned_products.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>38</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>description</remote-alias>
+              <ordinal>1</ordinal>
+              <family>returned_products.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1281</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='returned_products.csv' id='returned_products.csv_C1F7A173088B44B8A4589A4178D2CC79'>
+            <properties context=''>
+              <relation connection='textscan.14wxatl0orz1l914zs4nz04dw7ow' name='returned_products.csv' table='[returned_products#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='frequency_of_return' ordinal='0' />
+                  <column datatype='string' name='description' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Weekly_trans' inline='true' name='federated.1unq9eh1mvoqmz160yyw00srkfo7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Weekly_trans' name='textscan.1mzgh160eaguz413nlkl60xzs60b'>
+            <connection class='textscan' directory='D:/Self projects/E-commerce Data modelling/Analysis/Query_result_exports' filename='Weekly_trans.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1mzgh160eaguz413nlkl60xzs60b' name='Weekly_trans.csv' table='[Weekly_trans#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='avg_no_of_transections' ordinal='0' />
+            <column datatype='real' name='avg_sales' ordinal='1' />
+            <column datatype='integer' name='weekend_orders' ordinal='2' />
+            <column datatype='string' name='country' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Weekly_trans.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_no_of_transections</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[avg_no_of_transections]</local-name>
+            <parent-name>[Weekly_trans.csv]</parent-name>
+            <remote-alias>avg_no_of_transections</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_sales]</local-name>
+            <parent-name>[Weekly_trans.csv]</parent-name>
+            <remote-alias>avg_sales</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekend_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[weekend_orders]</local-name>
+            <parent-name>[Weekly_trans.csv]</parent-name>
+            <remote-alias>weekend_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[Weekly_trans.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Weekly_trans.csv' datatype='table' name='[__tableau_internal_object_id__].[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]' role='measure' type='quantitative' />
+      <column caption='Avg No Of Transections' datatype='integer' name='[avg_no_of_transections]' role='measure' type='quantitative' />
+      <column caption='Avg Sales' datatype='real' name='[avg_sales]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Weekend Orders' datatype='integer' name='[weekend_orders]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/pranj/AppData/Local/Temp/TableauTemp/#TableauTemp_1byqw8l0oz42e21d68g8z0tghw0k.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/07/2025 03:18:06 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>avg_no_of_transections</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[avg_no_of_transections]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_no_of_transections</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Weekly_trans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_sales</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Weekly_trans.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>56</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weekend_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[weekend_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weekend_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Weekly_trans.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Weekly_trans.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Weekly_trans.csv' id='Weekly_trans.csv_860D57D33CF748379E0E994FC167ADC7'>
+            <properties context=''>
+              <relation connection='textscan.1mzgh160eaguz413nlkl60xzs60b' name='Weekly_trans.csv' table='[Weekly_trans#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='avg_no_of_transections' ordinal='0' />
+                  <column datatype='real' name='avg_sales' ordinal='1' />
+                  <column datatype='integer' name='weekend_orders' ordinal='2' />
+                  <column datatype='string' name='country' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.1unq9eh1mvoqmz160yyw00srkfo7'>
+      <datasources>
+        <datasource caption='Weekly_trans' name='federated.1unq9eh1mvoqmz160yyw00srkfo7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1unq9eh1mvoqmz160yyw00srkfo7'>
+        <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:country:nk]'>
+        <groupfilter function='member' level='[none:country:nk]' member='&quot;Belgium&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        <target field='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:country:nk]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Average Monthly Transections</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='aggregated_trans' name='federated.1igwk971fbnfwu16f448p0oj49hv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1igwk971fbnfwu16f448p0oj49hv'>
+            <column-instance column='[transection_cost]' derivation='Avg' name='[avg:transection_cost:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[transection_cost]' derivation='Sum' name='[sum:transection_cost:qk]' pivot='key' type='quantitative' />
+            <column caption='Transection Cost' datatype='real' name='[transection_cost]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]' scope='rows' value='Total Transection Cost' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' value='200' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:transection_cost:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='255' />
+                <format attr='size' value='0.85657459497451782' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1igwk971fbnfwu16f448p0oj49hv].[avg:transection_cost:qk] + [federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk])</rows>
+        <cols>[federated.1igwk971fbnfwu16f448p0oj49hv].[mn:date:ok]</cols>
+      </table>
+      <simple-id uuid='{09006BD2-E3F4-4899-996E-F5F453BC2A2A}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Average Weekly Transections</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='aggregated_trans' name='federated.1igwk971fbnfwu16f448p0oj49hv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1igwk971fbnfwu16f448p0oj49hv'>
+            <column-instance column='[no_of_products]' derivation='Avg' name='[avg:no_of_products:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[transection_cost]' derivation='Avg' name='[avg:transection_cost:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='No Of Products' datatype='integer' name='[no_of_products]' role='measure' type='quantitative' />
+            <column-instance column='[no_of_products]' derivation='Sum' name='[sum:no_of_products:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[transection_cost]' derivation='Sum' name='[sum:transection_cost:qk]' pivot='key' type='quantitative' />
+            <column caption='Transection Cost' datatype='real' name='[transection_cost]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='Weekday' name='[wd:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:transection_cost:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:no_of_products:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:no_of_products:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.1igwk971fbnfwu16f448p0oj49hv].[wd:date:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>2</bucket>
+              <bucket>3</bucket>
+              <bucket>4</bucket>
+              <bucket>5</bucket>
+              <bucket>6</bucket>
+              <bucket>7</bucket>
+              <bucket>1</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]' scope='rows' value='Total Transection Cost' />
+            <encoding attr='space' class='0' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:no_of_products:qk]' scope='rows' value='Avg. no. of Products' />
+            <encoding attr='space' class='0' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:no_of_products:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:no_of_products:qk]' scope='rows' value='Total no. Of Products' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:transection_cost:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+                <format attr='size' value='0.83458560705184937' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1igwk971fbnfwu16f448p0oj49hv].[avg:no_of_products:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1igwk971fbnfwu16f448p0oj49hv].[sum:no_of_products:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+                <format attr='size' value='0.85657459497451782' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1igwk971fbnfwu16f448p0oj49hv].[avg:transection_cost:qk] + ([federated.1igwk971fbnfwu16f448p0oj49hv].[sum:transection_cost:qk] + ([federated.1igwk971fbnfwu16f448p0oj49hv].[avg:no_of_products:qk] + [federated.1igwk971fbnfwu16f448p0oj49hv].[sum:no_of_products:qk])))</rows>
+        <cols>[federated.1igwk971fbnfwu16f448p0oj49hv].[wd:date:ok]</cols>
+      </table>
+      <simple-id uuid='{2573EC1B-2D3E-4AE4-95F7-BA67B21495FC}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='14'>Weekday and Weekend Transections by Country</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Weekly_trans' name='federated.1unq9eh1mvoqmz160yyw00srkfo7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1unq9eh1mvoqmz160yyw00srkfo7'>
+            <column caption='Avg No Of Transections' datatype='integer' name='[avg_no_of_transections]' role='measure' type='quantitative' />
+            <column caption='Avg Sales' datatype='real' name='[avg_sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[weekend_orders]' derivation='None' name='[none:weekend_orders:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_no_of_transections]' derivation='Sum' name='[sum:avg_no_of_transections:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_sales]' derivation='Sum' name='[sum:avg_sales:qk]' pivot='key' type='quantitative' />
+            <column caption='Weekend Orders' datatype='integer' name='[weekend_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+          <_.fcp.IndividualControlFormatting.true...style-rule element='quick-filter'>
+            <_.fcp.IndividualControlFormatting.true...format attr='background-color' field='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:country:nk]' value='#dfedeb' />
+          </_.fcp.IndividualControlFormatting.true...style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[sum:avg_no_of_transections:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[sum:avg_sales:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>([federated.1unq9eh1mvoqmz160yyw00srkfo7].[sum:avg_no_of_transections:qk] + [federated.1unq9eh1mvoqmz160yyw00srkfo7].[sum:avg_sales:qk])</rows>
+        <cols>[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:weekend_orders:qk]</cols>
+      </table>
+      <simple-id uuid='{9FC2B09A-4DFF-4B0C-8DD6-5DD84AA86970}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Total Quantity of Product sold</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='product_sales' name='federated.1jaflfk0nqv5h21aq3b4316dyw50' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jaflfk0nqv5h21aq3b4316dyw50'>
+            <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+            <column-instance column='[description]' derivation='None' name='[none:description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_cost]' derivation='Sum' name='[sum:total_cost:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_quanity_sold]' derivation='Sum' name='[sum:total_quanity_sold:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Cost' datatype='real' name='[total_cost]' role='measure' type='quantitative' />
+            <column caption='Total Quanity Sold' datatype='integer' name='[total_quanity_sold]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1jaflfk0nqv5h21aq3b4316dyw50].[sum:total_cost:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1jaflfk0nqv5h21aq3b4316dyw50].[sum:total_quanity_sold:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:description:nk]' member='&quot; ANIMAL STICKERS&quot;' />
+              <groupfilter function='member' level='[none:description:nk]' member='&quot; BLACK PIRATE TREASURE CHEST&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]</column>
+            <column>[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]' value='347' />
+            <format attr='height' value='137' />
+            <format attr='height' field='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]' value='55' />
+            <format attr='vertical-align' data-class='subtotal' value='center' />
+            <format attr='text-align' value='center' />
+            <format attr='font-weight' data-class='subtotal' scope='cols' value='bold' />
+            <format attr='color' data-class='total' scope='rows' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='text-align' data-class='subtotal' value='center' />
+            <format attr='font-weight' data-class='total' scope='cols' value='bold' />
+            <format attr='band-color' scope='rows' value='#e2e6f0' />
+            <format attr='background-color' field='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]' value='#e9ebe0' />
+            <format attr='font-weight' data-class='subtotal' scope='cols' value='normal' />
+            <format attr='font-weight' data-class='subtotal' scope='rows' value='bold' />
+            <format attr='width' field='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]' value='128' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' scope='cols' value='bold' />
+            <format attr='font-weight' field='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]' value='bold' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#e8edda' />
+            <format attr='background-color' data-class='subtotal' scope='cols' value='#e2e6f0' />
+            <format attr='band-color' scope='rows' value='#e2e6f0' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[Multiple Values]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#757575'>Description:&#9;</run>
+                <run bold='true' fontalignment='1'><![CDATA[<[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#757575'>Total Quanity Sold:&#9;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]</rows>
+        <cols>[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]</cols>
+      </table>
+      <simple-id uuid='{AF659398-8E61-428E-A70E-BD3FED528E78}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Frequency of return</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='returned_products' name='federated.1r622a70wg3s3k102r24x068q72x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r622a70wg3s3k102r24x068q72x'>
+            <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+            <column caption='Frequency Of Return' datatype='integer' name='[frequency_of_return]' role='measure' type='quantitative' />
+            <column-instance column='[description]' derivation='None' name='[none:description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[frequency_of_return]' derivation='Sum' name='[sum:frequency_of_return:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]'>
+            <groupfilter function='level-members' level='[none:description:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1r622a70wg3s3k102r24x068q72x].[sum:frequency_of_return:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1r622a70wg3s3k102r24x068q72x].[sum:frequency_of_return:qk]' field-type='quantitative' range-type='independent' scale='log' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]' value='200' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1r622a70wg3s3k102r24x068q72x].[sum:frequency_of_return:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]</rows>
+        <cols>[federated.1r622a70wg3s3k102r24x068q72x].[sum:frequency_of_return:qk]</cols>
+      </table>
+      <simple-id uuid='{3C90AD10-88AC-4C51-94B3-7B6708F748EC}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size minheight='560' minwidth='420' sizing-mode='range' />
+      <datasources>
+        <datasource caption='product_sales' name='federated.1jaflfk0nqv5h21aq3b4316dyw50' />
+        <datasource caption='returned_products' name='federated.1r622a70wg3s3k102r24x068q72x' />
+        <datasource caption='Weekly_trans' name='federated.1unq9eh1mvoqmz160yyw00srkfo7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1jaflfk0nqv5h21aq3b4316dyw50'>
+        <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+        <column-instance column='[description]' derivation='None' name='[none:description:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1r622a70wg3s3k102r24x068q72x'>
+        <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+        <column-instance column='[description]' derivation='None' name='[none:description:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1unq9eh1mvoqmz160yyw00srkfo7'>
+        <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='8' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98060' id='11' param='horz' type-v2='layout-flow' w='99034' x='483' y='970'>
+            <zone h='98060' id='9' type-v2='layout-basic' w='61677' x='483' y='970'>
+              <zone h='39939' id='7' name='Sheet 1' w='61677' x='483' y='59091'>
+                <zone-style>
+                  <format attr='border-color' value='#d37295' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='38000' id='15' name='Sheet 3' w='30839' x='483' y='12000'>
+                <zone-style>
+                  <format attr='border-color' value='#59a14f' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='38606' id='20' name='Sheet 5' w='30838' x='31322' y='11394'>
+                <zone-style>
+                  <format attr='border-color' value='#4e79a7' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='84' h='4546' id='12' is-fixed='true' name='Sheet 1' pane-specification-id='1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' type-v2='color' w='61677' x='483' y='54545'>
+                <zone-style>
+                  <format attr='border-color' value='#d37295' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4545' id='13' name='Sheet 1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[mn:date:ok]' type-v2='highlighter' w='61677' x='483' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#d37295' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='11030' id='16' mode='radiolist' name='Sheet 3' param='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:country:nk]' type-v2='filter' w='30839' x='483' y='970'>
+                <zone-style>
+                  <format attr='border-color' value='#59a14f' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10424' id='21' name='Sheet 5' param='[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]' type-v2='filter' w='30838' x='31322' y='970'>
+                <zone-style>
+                  <format attr='border-color' value='#4e79a7' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='619' h='98060' id='10' is-fixed='true' param='vert' type-v2='layout-flow' w='37357' x='62160' y='970'>
+              <zone fixed-size='78' h='10425' id='19' is-fixed='true' name='Sheet 4' param='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]' type-v2='filter' w='37357' x='62160' y='970'>
+                <zone-style>
+                  <format attr='border-color' value='#f1ce63' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='27879' id='17' name='Sheet 4' w='37357' x='62160' y='11395'>
+                <layout-cache fixed-size-h='222' fixed-size-w='824' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#f1ce63' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='45695' id='22' name='Sheet 2' w='37357' x='62160' y='39274'>
+                <layout-cache cell-count-w='7' minheight='296' non-cell-size-w='175' type-h='scalable' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14061' id='23' name='Sheet 2' pane-specification-id='1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' type-v2='color' w='37357' x='62160' y='84969'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='2909' id='28' type-v2='dashboard-object' w='1448' x='31322' y='970'>
+          <button action=''>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{B659D63E-AF39-4CA0-977E-DC7D71589ABC}&quot; zone-id=&quot;28&quot; zone-ids=[16]</toggle-action>
+            <button-visual-state />
+            <button-visual-state />
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='27' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98060' id='26' param='vert' type-v2='layout-flow' w='99034' x='483' y='970'>
+                <zone h='10424' id='21' mode='checkdropdown' name='Sheet 5' param='[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]' type-v2='filter' w='30838' x='31322' y='970'>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='206' h='38606' id='20' is-fixed='true' name='Sheet 5' w='30838' x='31322' y='11394'>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='78' h='10425' id='19' mode='checkdropdown' name='Sheet 4' param='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]' type-v2='filter' w='37357' x='62160' y='970'>
+                  <zone-style>
+                    <format attr='border-color' value='#f1ce63' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='146' h='27879' id='17' is-fixed='true' name='Sheet 4' w='37357' x='62160' y='11395'>
+                  <layout-cache fixed-size-h='222' fixed-size-w='824' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#f1ce63' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11030' id='16' mode='checkdropdown' name='Sheet 3' param='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:country:nk]' type-v2='filter' w='30839' x='483' y='970'>
+                  <zone-style>
+                    <format attr='border-color' value='#59a14f' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='203' h='38000' id='15' is-fixed='true' name='Sheet 3' w='30839' x='483' y='12000'>
+                  <zone-style>
+                    <format attr='border-color' value='#59a14f' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='246' h='45695' id='22' is-fixed='true' name='Sheet 2' w='37357' x='62160' y='39274'>
+                  <layout-cache cell-count-w='7' minheight='296' non-cell-size-w='175' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14061' id='23' name='Sheet 2' pane-specification-id='1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' type-v2='color' w='37357' x='62160' y='84969'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4545' id='13' name='Sheet 1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[mn:date:ok]' type-v2='highlighter' w='61677' x='483' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#d37295' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='214' h='39939' id='7' is-fixed='true' name='Sheet 1' w='61677' x='483' y='59091'>
+                  <zone-style>
+                    <format attr='border-color' value='#d37295' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='84' h='4546' id='12' name='Sheet 1' pane-specification-id='1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' type-v2='color' w='61677' x='483' y='54545'>
+                  <zone-style>
+                    <format attr='border-color' value='#d37295' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{40615107-C573-449A-981C-3B8295C5B1C2}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='200'>
+            <card param='[federated.1igwk971fbnfwu16f448p0oj49hv].[mn:date:ok]' type='highlighter' />
+            <card pane-specification-id='1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{219FB628-6147-4475-8892-AE23DC3A4EB4}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='200'>
+            <card pane-specification-id='1' param='[federated.1igwk971fbnfwu16f448p0oj49hv].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{78091970-36F4-4FDA-B31B-CCBCF74D45FF}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='200'>
+            <card mode='checkdropdown' param='[federated.1unq9eh1mvoqmz160yyw00srkfo7].[none:country:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ACBA104C-5A47-4D43-AED2-1BBC9966A041}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='200'>
+            <card param='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[:Measure Names]' show-morefewerbutton='false' type='filter' />
+            <card param='[federated.1jaflfk0nqv5h21aq3b4316dyw50].[none:description:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C8BF2F16-2FED-4080-BDF3-B05B05F2CB79}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='200'>
+            <card param='[federated.1r622a70wg3s3k102r24x068q72x].[none:description:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1r622a70wg3s3k102r24x068q72x].[sum:frequency_of_return:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6B792B22-5791-423B-9FB8-BB9B6918375D}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4' />
+        <viewpoint name='Sheet 5' />
+      </viewpoints>
+      <active id='15' />
+      <simple-id uuid='{B659D63E-AF39-4CA0-977E-DC7D71589ABC}' />
+    </window>
+  </windows>
+</workbook>
