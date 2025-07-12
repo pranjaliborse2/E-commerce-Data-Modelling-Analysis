@@ -26,7 +26,7 @@ This project simulates a real-world retail data pipeline and analytical framewor
 ## Data Model
 
 The PostgreSQL database follows a star schema:
-<img width="1201" height="1003" alt="Star Schema drawio" src="https://github.com/user-attachments/assets/ff22673b-40b5-4672-853e-7ccac6642de3" />
+<img width="4404" height="3572" alt="image" src="https://github.com/user-attachments/assets/9391d666-18ea-44d1-be7e-c7be39a40ace" />
 ### Dimension Tables
 - `dim_customer`: customer_id, country
 - `dim_product`: product_id (StockCode), description
