@@ -1,6 +1,6 @@
 # E-commerce Transaction Analytics with PostgreSQL, Python, and Tableau
 
-This project simulates a real-world retail data pipeline and analytical framework using PostgreSQL for data modeling, Python for ETL, and Tableau Public for dashboarding. The goal is to uncover customer behavior, sales trends, and return patterns from raw sales transactions. This project mainly focuses on Data modelling (Schema, Dimension Table, Fact Table) concepts.
+This project simulates a real-world retail data pipeline and analytical framework using PostgreSQL for data modeling, Python for ETL, and Tableau Public for dashboarding. The goal is to develop Production-ready data warehouse implementation featuring a normalized star schema design, an automated ETL pipeline, and analytics-optimized data modeling in PostgreSQL.
 
 ---
 
